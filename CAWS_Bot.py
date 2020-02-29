@@ -5,7 +5,7 @@ from discord.utils import get
 import youtube_dl
 
 # Discord Token required to use the bot
-TOKEN = 'NjcwMTE5NDc2MDMyODMxNDg4.XipvmQ.-7l-wt8rScQhTuGkZZAXXVGO3XE'
+TOKEN = 'NjcwMTE5NDc2MDMyODMxNDg4.XloL2Q.dD2TOnHG50e4KDShnYMTy5hrCBE'
 
 # Prefix for all commands
 client = commands.Bot(command_prefix = '.')
