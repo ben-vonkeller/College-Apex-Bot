@@ -23,14 +23,14 @@ playerDictionary = {}
 async def on_message(message):
     if message.channel.name == 'champs':
         if message.content != '.clear':
-            if message.content in champDictionary:
-                temp = champDictionary.get(message.content)
+            if message.content.lower() in champDictionary:
+                temp = champDictionary.get(message.content.lower())
                 temp = temp + 1
-                champDictionary[message.content] = temp
+                champDictionary[message.content.lower()] = temp
             else:
-                champDictionary[message.content] = 1
-            if message.author.name not in playerDictionary:
-                playerDictionary[message.author.name] = message.content
+                champDictionary[message.content.lower()] = 1
+            if message.author.mention not in playerDictionary:
+                playerDictionary[message.author.mention] = message.content.lower()
     await client.process_commands(message)
 
 # Simple event handler that tells the command prompt that the bot is up and ready to be used.
